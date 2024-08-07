@@ -9,6 +9,9 @@ const main = async () => {
     const candidates = await getCandidates();
     const employees = await getEmployees();
 
+    console.log(`Found ${candidates.length} candidates`);
+    console.log(`Found ${employees.length} employees`);
+
     if (employees.length === 0) {
       console.log("No employees found in the database.");
       return;
